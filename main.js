@@ -1,36 +1,21 @@
-/* Ejercicio #7: Realizar un programa que permita el ingreso de los siguientes datos: Nombre, pase (vip o normal), si posee entrada (si o no, s o n, true o false). Las personas que posean tu mismo nombre tienen ingreso libre así como también los que posean un pase vip,
-mostrar un mensaje de bienvenida. Si posee entrada preguntar si desea utilizarla, en caso afirmativo mostrar mismo mensaje de bienvenida. Y por último de no tener el mismo nombre o poseer un pase vip o entrada, preguntar si desea comprar, caso afirmativo solicitar dinero disponible, si posee $1000 o más, mostrar mensaje de venta de entrada y bienvenida, caso contrario mostrar mensaje de rechazo de venta, y en caso contrario a no querer comprar, mostrar mensaje de despedida.*/
+/* Ejercicio #9: Crear un programa que permita ingresar tu edad y decir si eres un infante (0 a 12 años), adolescente (13 a 18 años), un mayor joven (19 a 45 años) o un anciano (mas de 45 años), y en caso de ingresar una edad mayor a 100 mostrar un mensaje preguntando si en realidad tiene esa edad.
+ */
 
-let nombre = prompt("ingresa tu nombre")
-let pase = prompt("¿posee pase VIP o Normal?")
-let entrada = prompt("¿posee entrada? Responda si o no")
 
-if ((nombre == "alexander" || nombre == "Alexander") || (pase == "VIP" || pase == "vip")) {
-    alert("FELICIDADES, Tienes el ingreso libre")
-} else if ((entrada == "si" || entrada == "SI") || (entrada == "s" || entrada == "S") || (entrada == "true" || entrada == "TRUE")) {
-    let usarEntrada = prompt("¿Desea utilizar su entrada?")
+|
 
-    if ((usarEntrada == "si") || (usarEntrada == "SI")) {
-        alert("FELICIDADES, Tienes el ingreso libre")
-    } else {
-        alert("DISCULPE, usted no tiene el ingreso permitido")
-    }
-} else if ((entrada = "no") || (entrada = "NO")) {
-    let comprarEntrada = prompt("¿Desea comprar una entrada?")
-    
-        if(comprarEntrada == "si"){
-            
-        }
 
-    if (dineroDisponible >= 1000) {
-        alert("FELICIDADES, Usted ya puede ingresar")
-    } else {
-        alert("DISCULPE, usted no tiene el ingreso permitido")
-    }
 
-} else {
-    alert("DISCULPE, usted no tiene el ingreso permitido")
-}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -113,5 +98,109 @@ if ((edad >= 18 && altura >= 150) && (vision >= 8 && vision <= 10)) {
     console.log("La persona " + suNombre + " no esta capacitada para conducir")
 }
 
+/* Ejercicio #7: Realizar un programa que permita el ingreso de los siguientes datos: Nombre, pase (vip o normal), si posee entrada (si o no, s o n, true o false). Las personas que posean tu mismo nombre tienen ingreso libre así como también los que posean un pase vip, mostrar un mensaje de bienvenida. Si posee entrada preguntar si desea utilizarla, en caso afirmativo mostrar mismo mensaje de bienvenida. Y por último de no tener el mismo nombre o poseer un pase vip o entrada, preguntar si desea comprar, caso afirmativo solicitar dinero disponible, si posee $1000 o más, mostrar mensaje de venta de entrada y bienvenida, caso contrario mostrar mensaje de rechazo de venta, y en caso contrario a no querer comprar, mostrar mensaje de despedida.*/
+
+let nombre = prompt("ingresa tu nombre")
+let pase = prompt("¿posee pase VIP o Normal?")
+let entrada = prompt("¿posee entrada? Responda si o no")
+
+if ((nombre === "alexander" || nombre === "Alexander") || (pase === "VIP" || pase === "vip")) {
+    alert("FELICIDADES, Tienes el ingreso libre")
+} else if ((entrada === "si" || entrada === "SI") || (entrada === "s" || entrada === "S") || (entrada === "true" || entrada === "TRUE")) {
+    let usarEntrada = prompt("¿Desea utilizar su entrada?")
+
+    if ((usarEntrada === "si") || (usarEntrada === "SI")) {
+        alert("FELICIDADES, Tienes el ingreso libre")
+    } else {
+        alert("DISCULPE, usted no tiene el ingreso permitido")
+    }
+} else if ((entrada === "no") || (entrada === "NO")) {
+    let comprarEntrada = prompt("¿Desea comprar una entrada?")
+    
+        if((comprarEntrada === "si") || (comprarEntrada == "SI")){
+            let = dineroDisponible = parseInt(prompt("¿Cuanto dinero tiene disponible?"))
+        
+            if (dineroDisponible >= 1000) {
+                let saldo = dineroDisponible - 1000
+                alert("FELICIDADES, Usted ya puede ingresar. Su cambio es de " +saldo+ " Dolares" )
+            } else {
+                alert("DISCULPE, No es suficiente para adquirir una entrada y la venta sera rechazada")
+            }
+        } else {
+            alert("DISCULPE, usted no tiene el ingreso permitido")
+        }
+} else {
+    alert("DISCULPE, usted no tiene el ingreso permitido")
+}
+
+/* Ejercicio #8: Realizar un juego de adivinanza estableciendo un valor entre 1 y 10 en una variable llamada numeroIncognita y que permita en 3 intentos adivinar el número. El usuario deberá ingresar un numero del 1 al 10 por pantalla en 3 intentos el cual se deberá guardar en una variable llamada numeroIngresado, y en cada intento deberás mostrarle un mensaje al usuario diciendo: “el numero ingresado es mayor, vuelve a intentarlo” o “el numero ingresado es menor, vuelve a intentarlo” o en caso de adivinar, un mensaje que diga: “Ganaste, haz adivinado el número.” No te preocupes si usas mucho código repetido, mas adelante veraz como realizar este juego de manera más eficiente.*/
 
 
+alert("Hola...! juguemos un poco, puedes adivinar el numero que estoy pensando? Tienes tres oportunidades ;)")
+
+let numeroIncognita = 6
+let numeroIngresado = prompt("ingrese un número del 1 al 10")
+
+if (numeroIngresado > numeroIncognita) {
+    alert("el numero ingresado es mayor, vuelve a intentarlo. Te quedan 2 turnos")
+
+}else if (numeroIngresado < numeroIncognita) {
+    alert("el numero ingresado es menor, vuelve a intentarlo. Te quedan 2 turnos")
+
+}else{
+    alert("Ganaste, haz adivinado el número.")
+}
+
+numeroIngresado = prompt("ingrese un número del 1 al 10")
+
+
+if (numeroIngresado > numeroIncognita) {
+    alert("el numero ingresado es mayor, vuelve a intentarlo. Te queda 1 turno")
+
+}else if (numeroIngresado < numeroIncognita) {
+    alert("el numero ingresado es menor, vuelve a intentarlo. Te queda 1 turno")
+
+}else{
+    alert("Ganaste, haz adivinado el número.")
+}
+
+numeroIngresado = prompt("ingrese un número del 1 al 10")
+
+if (numeroIngresado > numeroIncognita) {
+    alert("el numero ingresado es mayor, Lo siento, haz perdido :(")
+
+}else if (numeroIngresado < numeroIncognita) {
+    alert("el numero ingresado es menor, Lo siento, haz perdido :(")
+
+}else{
+    alert("Ganaste, haz adivinado el número.")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ejercicio #10: Crear un programa que permita el ingreso de “PIEDRA”, “PAPEL” o “TIJERAS” a 2 jugadores y muestre en pantalla cual de los 2 ha ganado o si han empatado. En caso de algún ingreso incorrecto mostrar por pantalla que uno de los jugadores ha hecho trampa.
+ */
+
+/* Ejercicio #11: Realizar un programa que permita el ingreso de un color y utilizando “switch” mostrar por pantalla los siguientes mensajes según las opciones: Blanco o Negro: Falta de color, Verde: El color de la naturaleza, Azul: El color del agua, Amarillo: El color del sol, Rojo: El color del fuego, Marrón: el color de la tierra, y para cualquier otro valor: Excelente elección, no lo teníamos pensado.
+ */
+
+
+/* Ejercicio #12: ealizar un programa que permita el ingreso de 2 valores numéricos y una operación. Según sea la operación ingresada (suma, resta, multiplicación, división) el programa deberá mostrar en pantalla un mensaje junto con el resultado. En caso de haber elegido división realizar la operación siempre que sea posible o mostrar un mensaje de ERROR si el divisor ingresado fue 0.
+ */
+
+
+/* Ejercicio #13: Crear un programa que permita ingresar todos los datos de tu documento nacional de identidad, mostrar por pantalla un mensaje que imprima todos los datos ingresados y pregunte si están correctos los mismos. En caso afirmativo, crear un objeto llamado dni con todos los datos ingresados y mostrarlos por consola con console.table() mas un mensaje de registro exitoso, en caso de que la persona rechace confirmar los datos, mostrar un mensaje que diga: vuelva a intentarlo en 1 mes.
+ */
