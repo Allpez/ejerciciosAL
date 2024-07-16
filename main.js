@@ -190,21 +190,21 @@ alert("Juguemos piedra, papel o tijeras. El Jugador #1 inicia, luego le toca al 
 let jugador1  = prompt("Jugador #1, escoge tu arma").toLowerCase()
 let jugador2  = prompt("Jugador #2, escoge tu arma").toLowerCase()
 
-if (jugador1 == "piedra" && jugador2 == "tijeras")
+if (jugador1 == "piedra" && jugador2 == "tijeras"){
     alert("El jugador #1 ha ganado la partida")
-else if (jugador1 == "tijeras" && jugador2 == "papel")
+}else if (jugador1 == "tijeras" && jugador2 == "papel"){
     alert("El jugador #1 ha ganado la partida")
-else if (jugador1 == "papel" && jugador2 == "piedra")
+}else if (jugador1 == "papel" && jugador2 == "piedra")
     alert("El jugador #1 ha ganado la partida")
-if (jugador1 == "piedra" && jugador2 == "papel")
+if (jugador1 == "piedra" && jugador2 == "papel"){
     alert("El jugador #2 ha ganado la partida")
-else if (jugador1 == "tijeras" && jugador2 == "piedra")
+}else if (jugador1 == "tijeras" && jugador2 == "piedra"){
     alert("El jugador #2 ha ganado la partida")
-else if (jugador1 == "papel" && jugador2 == "tijeras")
+}else if (jugador1 == "papel" && jugador2 == "tijeras"){
     alert("El jugador #2 ha ganado la partida")
-else if (jugador1 == jugador2)
+}else if (jugador1 == jugador2){
     alert("El jugado queda empatado")
-else {
+}else {
     alert("Uno de los jugadores ha hecho trampa.")
 }
 
@@ -292,7 +292,7 @@ let mensaje = nombreCompleto + "\n" +
 "fecha de nacimiento: " +fechaNacimiento+ "\n" + 
 "lugar de nacimiento: " +lugarNacimiento+ "\n" + 
 "estatura: " +estatura+ "\n" + 
-"sexo" + " " +sexo+"\n" + 
+"sexo: " +sexo+"\n" + 
 "tipo de sangre: " +tipoSangre+"\n" + 
 "¿sus datos son correctos?"
 
